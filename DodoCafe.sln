@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking.Sockets
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking.Sockets.Tests", "DodoCafe.Networking.Sockets.Tests\DodoCafe.Networking.Sockets.Tests.csproj", "{EC107B7A-89FF-4DB8-B85A-59F769F599CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking.Sockets.Mocks", "DodoCafe.Networking.Sockets.Tests.Mocks\DodoCafe.Networking.Sockets.Mocks.csproj", "{915FE310-F724-45FD-A0C3-40664E1E4D05}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Wrappers", "DodoCafe.Wrappers\DodoCafe.Wrappers.csproj", "{F8FC68B7-72B9-4E1B-B90D-E702730A57FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking", "DodoCafe.Networking\DodoCafe.Networking.csproj", "{D6102FBE-A642-489E-94A0-E85C028722F2}"
@@ -16,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Wrappers.Mocks", "DodoCafe.Wrappers.Mocks\DodoCafe.Wrappers.Mocks.csproj", "{A68CF500-47FC-4D76-B59D-E1C76C3108D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking.Tests", "DodoCafe.Networking.Tests\DodoCafe.Networking.Tests.csproj", "{65E518DB-C51D-435F-8043-FC636852D81A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoCafe.Networking.Sockets.Mocks", "DodoCafe.Networking.Sockets.Mocks\DodoCafe.Networking.Sockets.Mocks.csproj", "{B105F651-76DA-4054-B794-4A77815A7111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,26 +77,6 @@ Global
 		{EC107B7A-89FF-4DB8-B85A-59F769F599CA}.Release|x86.ActiveCfg = Release|x86
 		{EC107B7A-89FF-4DB8-B85A-59F769F599CA}.Release|x86.Build.0 = Release|x86
 		{EC107B7A-89FF-4DB8-B85A-59F769F599CA}.Release|x86.Deploy.0 = Release|x86
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|ARM.ActiveCfg = Debug|ARM
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|ARM.Build.0 = Debug|ARM
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|ARM64.Build.0 = Debug|ARM64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|x64.ActiveCfg = Debug|x64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|x64.Build.0 = Debug|x64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|x86.ActiveCfg = Debug|x86
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Debug|x86.Build.0 = Debug|x86
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|ARM.ActiveCfg = Release|ARM
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|ARM.Build.0 = Release|ARM
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|ARM64.ActiveCfg = Release|ARM64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|ARM64.Build.0 = Release|ARM64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|x64.ActiveCfg = Release|x64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|x64.Build.0 = Release|x64
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|x86.ActiveCfg = Release|x86
-		{915FE310-F724-45FD-A0C3-40664E1E4D05}.Release|x86.Build.0 = Release|x86
 		{F8FC68B7-72B9-4E1B-B90D-E702730A57FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8FC68B7-72B9-4E1B-B90D-E702730A57FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FC68B7-72B9-4E1B-B90D-E702730A57FC}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -183,6 +163,26 @@ Global
 		{65E518DB-C51D-435F-8043-FC636852D81A}.Release|x86.ActiveCfg = Release|x86
 		{65E518DB-C51D-435F-8043-FC636852D81A}.Release|x86.Build.0 = Release|x86
 		{65E518DB-C51D-435F-8043-FC636852D81A}.Release|x86.Deploy.0 = Release|x86
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|ARM.Build.0 = Debug|ARM
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|x64.ActiveCfg = Debug|x64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|x64.Build.0 = Debug|x64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|x86.ActiveCfg = Debug|x86
+		{B105F651-76DA-4054-B794-4A77815A7111}.Debug|x86.Build.0 = Debug|x86
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|ARM.ActiveCfg = Release|ARM
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|ARM.Build.0 = Release|ARM
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|ARM64.Build.0 = Release|ARM64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|x64.ActiveCfg = Release|x64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|x64.Build.0 = Release|x64
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|x86.ActiveCfg = Release|x86
+		{B105F651-76DA-4054-B794-4A77815A7111}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
