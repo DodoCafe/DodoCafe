@@ -162,8 +162,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DodoCafe.Networking.Sockets.Tests.Mocks\DodoCafe.Networking.Sockets.Mocks.csproj">
-      <Project>{915fe310-f724-45fd-a0c3-40664e1e4d05}</Project>
+    <ProjectReference Include="..\DodoCafe.Networking.Sockets.Mocks\DodoCafe.Networking.Sockets.Mocks.csproj">
+      <Project>{b105f651-76da-4054-b794-4a77815a7111}</Project>
       <Name>DodoCafe.Networking.Sockets.Mocks</Name>
     </ProjectReference>
     <ProjectReference Include="..\DodoCafe.Networking.Sockets\DodoCafe.Networking.Sockets.csproj">

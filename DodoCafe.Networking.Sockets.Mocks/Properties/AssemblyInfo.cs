@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "DodoCafe.Networking.Sockets.Mocks" )]
+[assembly: AssemblyTitle("DodoCafe.Networking.Sockets.Mocks")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct( "DodoCafe.Networking.Sockets.Mocks" )]
+[assembly: AssemblyProduct("DodoCafe.Networking.Sockets.Mocks")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{915FE310-F724-45FD-A0C3-40664E1E4D05}</ProjectGuid>
+    <ProjectGuid>{B105F651-76DA-4054-B794-4A77815A7111}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DodoCafe.Networking.Sockets.Mocks</RootNamespace>
@@ -123,7 +123,7 @@
     <Compile Include="CSignalReceivingTcpSocketMock.cs" />
     <Compile Include="CSignalReceivingTcpSocketStateMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\DodoCafe.Networking.Sockets.Tests.Mocks.rd.xml" />
+    <EmbeddedResource Include="Properties\DodoCafe.Networking.Sockets.Mocks.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
