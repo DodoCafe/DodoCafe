@@ -28,6 +28,12 @@ namespace DodoCafe.Networking.Sockets
             {
                 await m_kSocket.ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost();
             }
+
+            public void Disconnect()
+            {
+                m_kSocket.CallStreamSocketDisconnect();
+                m_kSocket.ChangeStateToDisconnecting();
+            }
         }
     }
 }

@@ -13,11 +13,16 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         {
             get; set;
         }
+        public bool IsCalledDisconnect
+        {
+            get; set;
+        }
 
         public CStreamSocketWrapperMock()
         {
             IsCalledConnectAsync = false;
             IsCalledIsEmptyReceivedString = false;
+            IsCalledDisconnect = false;
         }
 
         public override async Task ConnectAsync( string strServerApplicationIp, int nServerApplicationPortNumber )
@@ -29,6 +34,11 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         {
             IsCalledIsEmptyReceivedString = true;
             return true;
+        }
+
+        public override void Disconnect()
+        {
+            IsCalledDisconnect = true;
         }
     }
 }

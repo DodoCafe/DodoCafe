@@ -6,5 +6,6 @@ namespace DodoCafe.Networking.Sockets
     {
         Task ConnectAsync( string strServerApplicationIpv4, int nServerApplicationPortNumber );
         Task ReceiveSignalAsync();
+        void Disconnect();
     }
 }
