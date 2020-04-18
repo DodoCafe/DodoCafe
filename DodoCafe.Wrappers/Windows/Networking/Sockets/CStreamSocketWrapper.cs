@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Windows.Networking;
 using Windows.Networking.Sockets;
@@ -21,7 +22,12 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
 
         public virtual async Task< bool > IsEmptyReceivedString()
         {
-            return false;
+            return ( await GetReceivedString() ) == "";
+        }
+
+        private Task< string > GetReceivedString()
+        {
+            return ( new StreamReader( m_kStreamSocket.InputStream.AsStreamForRead() ) ).ReadToEndAsync();
         }
     }
 }
