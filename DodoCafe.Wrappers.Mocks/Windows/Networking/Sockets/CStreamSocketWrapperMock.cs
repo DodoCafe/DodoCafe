@@ -30,7 +30,7 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
             IsCalledConnectAsync = true;
         }
 
-        public override async Task< bool > IsEmptyReceivedString()
+        public override async Task< bool > IsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
             IsCalledIsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = true;
             return true;

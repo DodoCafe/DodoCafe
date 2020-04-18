@@ -58,7 +58,7 @@ namespace DodoCafe.Networking.Sockets
 
         protected virtual async Task ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
-            if ( await m_kStreamSocket.IsEmptyReceivedString() )
+            if ( await m_kStreamSocket.IsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost() )
             {
                 throw new ApplicationException( ERROR_RECEIVED_STRING_IS_EMPTY );
             }
