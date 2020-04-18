@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Windows.Networking;
 using Windows.Networking.Sockets;
@@ -17,6 +18,16 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
         public virtual async Task ConnectAsync( string strServerApplicationIp, int nServerApplicationPortNumber )
         {
             await m_kStreamSocket.ConnectAsync( new HostName( strServerApplicationIp ), nServerApplicationPortNumber.ToString() );
+        }
+
+        public virtual async Task< bool > IsEmptyReceivedString()
+        {
+            return ( await GetReceivedString() ) == "";
+        }
+
+        private Task< string > GetReceivedString()
+        {
+            return ( new StreamReader( m_kStreamSocket.InputStream.AsStreamForRead() ) ).ReadToEndAsync();
         }
     }
 }

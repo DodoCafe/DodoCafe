@@ -8,15 +8,25 @@ namespace DodoCafe.Networking.Sockets.Mocks
         {
             get; set;
         }
+        public bool IsCalledReceiveSignalAsync
+        {
+            get; set;
+        }
 
         public CSignalReceivingTcpSocketStateMock()
         {
             IsCalledConnectAsync = false;
+            IsCalledReceiveSignalAsync = false;
         }
 
         public async Task ConnectAsync( string strServerApplicationIpv4, int nServerApplicationPortNumber )
         {
             IsCalledConnectAsync = true;
+        }
+
+        public async Task ReceiveSignalAsync()
+        {
+            IsCalledReceiveSignalAsync = true;
         }
     }
 }

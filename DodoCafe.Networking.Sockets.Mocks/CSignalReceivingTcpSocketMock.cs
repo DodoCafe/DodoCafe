@@ -12,11 +12,16 @@ namespace DodoCafe.Networking.Sockets.Mocks
         {
             get; set;
         }
+        public bool IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost
+        {
+            get; set;
+        }
 
         public CSignalReceivingTcpSocketMock()
         {
             IsCalledCallStreamSocketConnectAsync = false;
             IsCalledChangeStateToConnecting = false;
+            IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = false;
         }
 
         protected override void ChangeStateToConnecting()
@@ -27,6 +32,11 @@ namespace DodoCafe.Networking.Sockets.Mocks
         protected override async Task CallStreamSocketConnectAsync( string strServerApplicationIpv4, int nServerApplicationPortNumber )
         {
             IsCalledCallStreamSocketConnectAsync = true;
+        }
+
+        protected override async Task ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
+        {
+            IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = true;
         }
     }
 }
