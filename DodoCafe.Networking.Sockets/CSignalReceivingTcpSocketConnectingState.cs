@@ -26,6 +26,7 @@ namespace DodoCafe.Networking.Sockets
 
             public async Task ReceiveSignalAsync()
             {
+                await m_kSocket.ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost();
             }
         }
     }

@@ -8,6 +8,7 @@ namespace DodoCafe.Networking.Sockets
     {
         private static string ERROR_SERVER_APPLICATION_IP_IS_NOT_IPV4 = "The given server application IP is not an IPv4";
         private static string ERROR_SERVER_APPLICATION_PORT_NUMBER_IS_NOT_TCP_PORT_NUMBER = "The given server application port number is not a TCP port number.";
+        private static string ERROR_RECEIVED_STRING_IS_EMPTY = "The received string is empty";
         private CStreamSocketWrapper m_kStreamSocket;
         private ISignalReceivingTcpSocketState m_kState;
 
@@ -48,6 +49,14 @@ namespace DodoCafe.Networking.Sockets
                 throw new ArgumentException( ERROR_SERVER_APPLICATION_PORT_NUMBER_IS_NOT_TCP_PORT_NUMBER );
             }
             await m_kStreamSocket.ConnectAsync( strServerApplicationIpv4, nServerApplicationPortNumber );
+        }
+
+        protected virtual async Task ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
+        {
+            if ( await m_kStreamSocket.IsEmptyReceivedString() )
+            {
+                throw new ApplicationException( ERROR_RECEIVED_STRING_IS_EMPTY );
+            }
         }
     }
 }
