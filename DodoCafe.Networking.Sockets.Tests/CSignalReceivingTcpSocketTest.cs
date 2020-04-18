@@ -119,7 +119,7 @@ namespace DodoCafe.Networking.Sockets.Tests
         public async Task test_receiving_empty_string_since_after_connection_is_established_until_before_connection_is_closed_unilaterally_by_remote_host_throwing_exception()
         {
             await Assert.ThrowsExceptionAsync< ApplicationException >( () => ( Task )CallNonPublicMemberFunction( PROTECTED_MEMBER_FUNCTION_NAME_RECEIVE_NON_EMPTY_STRING, null ) );
-            Assert.IsTrue( m_kStreamSocket.IsCalledIsEmptyReceivedString );
+            Assert.IsTrue( m_kStreamSocket.IsCalledIsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost );
         }
 
         [ TestMethod() ]
