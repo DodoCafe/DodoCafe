@@ -53,5 +53,11 @@ namespace DodoCafe.Networking.Sockets.Tests
         {
             await Assert.ThrowsExceptionAsync< InvalidOperationException >( () => m_kState.ReceiveSignalAsync() );
         }
+
+        [ TestMethod() ]
+        public void test_disconnect_throwing_exception()
+        {
+            Assert.ThrowsException< InvalidOperationException >( () => m_kState.Disconnect() );
+        }
     }
 }
