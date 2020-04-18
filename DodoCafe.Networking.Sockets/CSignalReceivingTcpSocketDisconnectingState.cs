@@ -23,6 +23,10 @@ namespace DodoCafe.Networking.Sockets
                 await m_kSocket.CallStreamSocketConnectAsync( strServerApplicationIpv4, nServerApplicationPortNumber );
                 m_kSocket.ChangeStateToConnecting();
             }
+
+            public async Task ReceiveSignalAsync()
+            {
+            }
         }
     }
 }

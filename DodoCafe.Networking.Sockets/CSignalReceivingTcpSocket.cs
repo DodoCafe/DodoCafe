@@ -22,6 +22,11 @@ namespace DodoCafe.Networking.Sockets
             await m_kState.ConnectAsync( strServerApplicationIpv4, nServerApplicationPortNumber );
         }
 
+        public async Task ReceiveSignalAsync()
+        {
+            await m_kState.ReceiveSignalAsync();
+        }
+
         protected virtual void ChangeStateToConnecting()
         {
             m_kState = new CSignalReceivingTcpSocketConnectingState( this );
