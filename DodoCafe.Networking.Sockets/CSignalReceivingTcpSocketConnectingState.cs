@@ -23,6 +23,17 @@ namespace DodoCafe.Networking.Sockets
             {
                 throw new InvalidOperationException( ERROR_CONNECT_ASYNC_IS_CALLED_IN_SIGNAL_RECEIVING_TCP_SOCKET_CONNECTING_STATE );
             }
+
+            public async Task ReceiveSignalAsync()
+            {
+                await m_kSocket.ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost();
+            }
+
+            public void Disconnect()
+            {
+                m_kSocket.CallStreamSocketDisconnect();
+                m_kSocket.ChangeStateToDisconnecting();
+            }
         }
     }
 }

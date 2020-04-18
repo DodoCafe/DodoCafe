@@ -47,5 +47,17 @@ namespace DodoCafe.Networking.Sockets.Tests
             Assert.IsTrue( m_kSocket.IsCalledCallStreamSocketConnectAsync );
             Assert.IsTrue( m_kSocket.IsCalledChangeStateToConnecting );
         }
+
+        [ TestMethod() ]
+        public async Task test_receive_signal_throwing_exception()
+        {
+            await Assert.ThrowsExceptionAsync< InvalidOperationException >( () => m_kState.ReceiveSignalAsync() );
+        }
+
+        [ TestMethod() ]
+        public void test_disconnect_throwing_exception()
+        {
+            Assert.ThrowsException< InvalidOperationException >( () => m_kState.Disconnect() );
+        }
     }
 }
