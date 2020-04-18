@@ -28,6 +28,11 @@ namespace DodoCafe.Networking.Sockets
             await m_kState.ReceiveSignalAsync();
         }
 
+        public void Disconnect()
+        {
+            m_kState.Disconnect();
+        }
+
         protected virtual void ChangeStateToConnecting()
         {
             m_kState = new CSignalReceivingTcpSocketConnectingState( this );

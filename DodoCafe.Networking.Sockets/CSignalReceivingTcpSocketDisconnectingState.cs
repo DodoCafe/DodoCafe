@@ -29,6 +29,10 @@ namespace DodoCafe.Networking.Sockets
             {
                 throw new InvalidOperationException( ERROR_RECEIVE_SIGNAL_ASYNC_IS_CALLED_IN_SIGNAL_RECEIVING_TCP_SOCKET_DISCONNECTING_STATE );
             }
+
+            public void Disconnect()
+            {
+            }
         }
     }
 }

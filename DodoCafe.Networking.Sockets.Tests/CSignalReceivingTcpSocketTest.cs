@@ -72,6 +72,13 @@ namespace DodoCafe.Networking.Sockets.Tests
         }
 
         [ TestMethod() ]
+        public void test_disconnect_calling_state_disconnect()
+        {
+            m_kSocket.Disconnect();
+            Assert.IsTrue( m_kState.IsCalledDisconnect );
+        }
+
+        [ TestMethod() ]
         public void test_changing_state_to_connecting()
         {
             CallNonPublicMemberFunction( PROTECTED_MEMBER_FUNCTION_NAME_CHANGE_STATE_TO_CONNECTING, null );
