@@ -12,11 +12,16 @@ namespace DodoCafe.Networking.Sockets.Mocks
         {
             get; set;
         }
+        public bool IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost
+        {
+            get; set;
+        }
 
         public CSignalReceivingTcpSocketMock()
         {
             IsCalledCallStreamSocketConnectAsync = false;
             IsCalledChangeStateToConnecting = false;
+            IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = false;
         }
 
         protected override void ChangeStateToConnecting()
