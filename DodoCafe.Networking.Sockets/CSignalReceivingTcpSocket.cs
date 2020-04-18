@@ -49,5 +49,9 @@ namespace DodoCafe.Networking.Sockets
             }
             await m_kStreamSocket.ConnectAsync( strServerApplicationIpv4, nServerApplicationPortNumber );
         }
+
+        protected virtual async Task ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
+        {
+        }
     }
 }

@@ -33,5 +33,10 @@ namespace DodoCafe.Networking.Sockets.Mocks
         {
             IsCalledCallStreamSocketConnectAsync = true;
         }
+
+        protected override async Task ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
+        {
+            IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = true;
+        }
     }
 }
