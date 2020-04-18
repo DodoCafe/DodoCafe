@@ -18,5 +18,10 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
         {
             await m_kStreamSocket.ConnectAsync( new HostName( strServerApplicationIp ), nServerApplicationPortNumber.ToString() );
         }
+
+        public virtual async Task< bool > IsEmptyReceivedString()
+        {
+            return false;
+        }
     }
 }

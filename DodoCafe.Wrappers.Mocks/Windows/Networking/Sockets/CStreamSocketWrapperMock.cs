@@ -24,5 +24,11 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         {
             IsCalledConnectAsync = true;
         }
+
+        public override async Task< bool > IsEmptyReceivedString()
+        {
+            IsCalledIsEmptyReceivedString = true;
+            return true;
+        }
     }
 }
