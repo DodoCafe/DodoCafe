@@ -29,5 +29,10 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
         {
             return ( new StreamReader( m_kStreamSocket.InputStream.AsStreamForRead() ) ).ReadToEndAsync();
         }
+
+        public virtual void Disconnect()
+        {
+            m_kStreamSocket.Dispose();
+        }
     }
 }

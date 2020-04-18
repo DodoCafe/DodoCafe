@@ -38,7 +38,7 @@ namespace DodoCafe.Networking.Sockets
             m_kState = new CSignalReceivingTcpSocketConnectingState( this );
         }
 
-        protected void ChangeStateToDisconnecting()
+        protected virtual void ChangeStateToDisconnecting()
         {
             m_kState = new CSignalReceivingTcpSocketDisconnectingState( this );
         }
@@ -62,6 +62,11 @@ namespace DodoCafe.Networking.Sockets
             {
                 throw new ApplicationException( ERROR_RECEIVED_STRING_IS_EMPTY );
             }
+        }
+
+        protected virtual void CallStreamSocketDisconnect()
+        {
+            m_kStreamSocket.Disconnect();
         }
     }
 }

@@ -52,5 +52,13 @@ namespace DodoCafe.Networking.Sockets.Tests
             await m_kState.ReceiveSignalAsync();
             Assert.IsTrue( m_kSocket.IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost );
         }
+
+        [ TestMethod() ]
+        public void test_disconnect_calling_context_methods()
+        {
+            m_kState.Disconnect();
+            Assert.IsTrue( m_kSocket.IsCalledCallStreamSocketDisconnect );
+            Assert.IsTrue( m_kSocket.IsCalledChangeStateToDisconnecting );
+        }
     }
 }

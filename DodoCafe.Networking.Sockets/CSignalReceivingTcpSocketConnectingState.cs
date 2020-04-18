@@ -31,6 +31,8 @@ namespace DodoCafe.Networking.Sockets
 
             public void Disconnect()
             {
+                m_kSocket.CallStreamSocketDisconnect();
+                m_kSocket.ChangeStateToDisconnecting();
             }
         }
     }
