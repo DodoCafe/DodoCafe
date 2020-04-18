@@ -48,5 +48,10 @@ namespace DodoCafe.Networking.Sockets.Mocks
         {
             IsCalledReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = true;
         }
+
+        protected override void CallStreamSocketDisconnect()
+        {
+            IsCalledCallStreamSocketDisconnect = true;
+        }
     }
 }

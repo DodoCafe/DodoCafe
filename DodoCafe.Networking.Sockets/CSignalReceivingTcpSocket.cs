@@ -63,5 +63,9 @@ namespace DodoCafe.Networking.Sockets
                 throw new ApplicationException( ERROR_RECEIVED_STRING_IS_EMPTY );
             }
         }
+
+        protected virtual void CallStreamSocketDisconnect()
+        {
+        }
     }
 }
