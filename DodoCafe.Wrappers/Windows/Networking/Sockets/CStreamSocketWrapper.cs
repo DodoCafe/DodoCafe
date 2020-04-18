@@ -22,10 +22,10 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
 
         public virtual async Task< bool > IsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
-            return ( await GetReceivedString() ) == "";
+            return ( await GetStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost() ) == "";
         }
 
-        private Task< string > GetReceivedString()
+        private Task< string > GetStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
             return ( new StreamReader( m_kStreamSocket.InputStream.AsStreamForRead() ) ).ReadToEndAsync();
         }
