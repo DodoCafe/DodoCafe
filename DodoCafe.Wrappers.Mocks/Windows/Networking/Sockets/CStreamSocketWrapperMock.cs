@@ -35,5 +35,10 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
             IsCalledIsEmptyReceivedString = true;
             return true;
         }
+
+        public override void Disconnect()
+        {
+            IsCalledDisconnect = true;
+        }
     }
 }

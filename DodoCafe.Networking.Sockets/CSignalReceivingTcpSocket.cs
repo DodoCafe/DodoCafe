@@ -66,6 +66,7 @@ namespace DodoCafe.Networking.Sockets
 
         protected virtual void CallStreamSocketDisconnect()
         {
+            m_kStreamSocket.Disconnect();
         }
     }
 }
