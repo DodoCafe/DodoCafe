@@ -9,7 +9,7 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         {
             get; set;
         }
-        public bool IsCalledIsEmptyReceivedString
+        public bool IsCalledIsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost
         {
             get; set;
         }
@@ -21,7 +21,7 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         public CStreamSocketWrapperMock()
         {
             IsCalledConnectAsync = false;
-            IsCalledIsEmptyReceivedString = false;
+            IsCalledIsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = false;
             IsCalledDisconnect = false;
         }
 
@@ -30,9 +30,9 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
             IsCalledConnectAsync = true;
         }
 
-        public override async Task< bool > IsEmptyReceivedString()
+        public override async Task< bool > IsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
-            IsCalledIsEmptyReceivedString = true;
+            IsCalledIsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost = true;
             return true;
         }
 

@@ -20,12 +20,12 @@ namespace DodoCafe.Wrappers.Windows.Networking.Sockets
             await m_kStreamSocket.ConnectAsync( new HostName( strServerApplicationIp ), nServerApplicationPortNumber.ToString() );
         }
 
-        public virtual async Task< bool > IsEmptyReceivedString()
+        public virtual async Task< bool > IsEmptyStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
-            return ( await GetReceivedString() ) == "";
+            return ( await GetStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost() ) == "";
         }
 
-        private Task< string > GetReceivedString()
+        private Task< string > GetStringReceivedSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost()
         {
             return ( new StreamReader( m_kStreamSocket.InputStream.AsStreamForRead() ) ).ReadToEndAsync();
         }
