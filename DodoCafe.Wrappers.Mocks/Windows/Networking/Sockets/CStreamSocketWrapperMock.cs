@@ -9,10 +9,15 @@ namespace DodoCafe.Wrappers.Mocks.Windows.Networking.Sockets
         {
             get; set;
         }
+        public bool IsCalledIsEmptyReceivedString
+        {
+            get; set;
+        }
 
         public CStreamSocketWrapperMock()
         {
             IsCalledConnectAsync = false;
+            IsCalledIsEmptyReceivedString = false;
         }
 
         public override async Task ConnectAsync( string strServerApplicationIp, int nServerApplicationPortNumber )

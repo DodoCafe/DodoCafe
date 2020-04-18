@@ -16,6 +16,7 @@ namespace DodoCafe.Networking.Sockets.Tests
         private static string PROTECTED_MEMBER_FUNCTION_NAME_CHANGE_STATE_TO_CONNECTING = "ChangeStateToConnecting";
         private static string PROTECTED_MEMBER_FUNCTION_NAME_CHANGE_STATE_TO_DISCONNECTING = "ChangeStateToDisconnecting";
         private static string PROTECTED_MEMBER_FUNCTION_NAME_CALL_STREAM_SOCKET_CONNECT_ASYNC = "CallStreamSocketConnectAsync";
+        private static string PROTECTED_MEMBER_FUNCTION_NAME_RECEIVE_NON_EMPTY_STRING = "ReceiveNonEmptyStringSinceAfterConnectionIsEstablishedUntilBeforeConnectionIsClosedUnilaterallyByRemoteHost";
         private CSignalReceivingTcpSocket m_kSocket;
         private CStreamSocketWrapperMock m_kStreamSocket;
         private CSignalReceivingTcpSocketStateMock m_kState;
@@ -104,6 +105,13 @@ namespace DodoCafe.Networking.Sockets.Tests
             object[] kArguments = { "1.1.1.1", 0 };
             await ( Task )CallNonPublicMemberFunction( PROTECTED_MEMBER_FUNCTION_NAME_CALL_STREAM_SOCKET_CONNECT_ASYNC, kArguments );
             Assert.IsTrue( m_kStreamSocket.IsCalledConnectAsync );
+        }
+
+        [ TestMethod() ]
+        public async Task test_receiving_empty_string_throwing_exception()
+        {
+            await Assert.ThrowsExceptionAsync< ApplicationException >( () => ( Task )CallNonPublicMemberFunction( PROTECTED_MEMBER_FUNCTION_NAME_RECEIVE_NON_EMPTY_STRING, null ) );
+            Assert.IsTrue( m_kStreamSocket.IsCalledIsEmptyReceivedString );
         }
     }
 }
