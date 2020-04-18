@@ -7,6 +7,7 @@ namespace DodoCafe.Networking.Sockets
     {
         public class CSignalReceivingTcpSocketDisconnectingState : ISignalReceivingTcpSocketState
         {
+            private static string ERROR_RECEIVE_SIGNAL_ASYNC_IS_CALLED_IN_SIGNAL_RECEIVING_TCP_SOCKET_DISCONNECTING_STATE = "Receive signal is called in the disconnecting state of a signal receiving TCP socket";
             private CSignalReceivingTcpSocket m_kSocket;
 
             public CSignalReceivingTcpSocketDisconnectingState( CSignalReceivingTcpSocket kSocket )
@@ -26,6 +27,7 @@ namespace DodoCafe.Networking.Sockets
 
             public async Task ReceiveSignalAsync()
             {
+                throw new InvalidOperationException( ERROR_RECEIVE_SIGNAL_ASYNC_IS_CALLED_IN_SIGNAL_RECEIVING_TCP_SOCKET_DISCONNECTING_STATE );
             }
         }
     }
