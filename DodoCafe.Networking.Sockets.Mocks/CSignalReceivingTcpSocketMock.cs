@@ -39,6 +39,11 @@ namespace DodoCafe.Networking.Sockets.Mocks
             IsCalledChangeStateToConnecting = true;
         }
 
+        protected override void ChangeStateToDisconnecting()
+        {
+            IsCalledChangeStateToDisconnecting = true;
+        }
+
         protected override async Task CallStreamSocketConnectAsync( string strServerApplicationIpv4, int nServerApplicationPortNumber )
         {
             IsCalledCallStreamSocketConnectAsync = true;

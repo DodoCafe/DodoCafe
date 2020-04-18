@@ -38,7 +38,7 @@ namespace DodoCafe.Networking.Sockets
             m_kState = new CSignalReceivingTcpSocketConnectingState( this );
         }
 
-        protected void ChangeStateToDisconnecting()
+        protected virtual void ChangeStateToDisconnecting()
         {
             m_kState = new CSignalReceivingTcpSocketDisconnectingState( this );
         }
