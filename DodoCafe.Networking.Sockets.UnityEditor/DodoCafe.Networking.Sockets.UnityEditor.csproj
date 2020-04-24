@@ -7,8 +7,8 @@
     <ProjectGuid>{C67DE3C1-B341-4A78-BA92-549C20D043CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DodoCafe.Networking.Sockets.UnityEditor</RootNamespace>
-    <AssemblyName>DodoCafe.Networking.Sockets.UnityEditor</AssemblyName>
+    <RootNamespace>DodoCafe.Networking.Sockets</RootNamespace>
+    <AssemblyName>DodoCafe.Networking.Sockets</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
